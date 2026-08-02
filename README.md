@@ -62,6 +62,7 @@ Thư viện này được phát triển dựa trên kiến thức của cộng �
 - Cộng đồng Arduino, ESP-IDF và các bài viết chia sẻ về JK BMS trên GitHub/forum
 
 Đặc biệt cảm ơn anh **nkimchauco** — chủ bộ pin LiFePO4 24S đã kiên nhẫn test, chụp ảnh app đối chiếu và cùng debug suốt quá trình. Thư viện này được verify thực tế trên JK-B2A24S20P.
+Code được AI QWEN 3.6 35B A3B chạy local với 2xRTX2080Ti mod 44GB Vram tự thực hiện hoàn toàn.
 
 ## License
 
