@@ -52,6 +52,17 @@ void loop() {
 - Arduino BLE wrapper không nhận notify từ JK BMS → dùng **native ESP-IDF API** (`esp_ble_gattc_register_for_notify`, `esp_ble_gattc_write_char`) kết hợp Arduino scan/connect
 - Offset temp KHÁC tài liệu syssi: MOS @144, T1 @162, T2 @164 (syssi ghi 134/130/132 — sai với BMS này)
 
+## Nguồn tham khảo & Lời cảm ơn 🙏
+
+Thư viện này được phát triển dựa trên kiến thức của cộng đồng mã nguồn mở. Xin cảm ơn:
+
+- **[syssi/esphome-jk-bms](https://github.com/syssi/esphome-jk-bms)** — tài liệu giao thức JK02, cấu trúc frame, cách parse dữ liệu
+- **[peff74/jkbms](https://github.com/peff74/jkbms)** — thư viện JK BMS cho ESP32, tham khảo cách giao tiếp BLE (lưu ý: thư viện này dùng big-endian, JK BMS thật ra là little-endian)
+- **[esphome/esphome](https://github.com/esphome/esphome)** — nền tảng IoT dùng để verify dữ liệu trước khi viết lib riêng
+- Cộng đồng Arduino, ESP-IDF và các bài viết chia sẻ về JK BMS trên GitHub/forum
+
+Đặc biệt cảm ơn anh **nkimchauco** — chủ bộ pin LiFePO4 24S đã kiên nhẫn test, chụp ảnh app đối chiếu và cùng debug suốt quá trình. Thư viện này được verify thực tế trên JK-B2A24S20P.
+
 ## License
 
 MIT
