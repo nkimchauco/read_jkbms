@@ -1,27 +1,11 @@
 #include <read_jkbms.h>
-#include <WiFi.h>
 
 #define JK_MAC "c8:47:8c:10:1a:5b"
-
-// WiFi — đổi theo mạng anh dùng
-const char* ssid = "Coki";
-const char* pass = "nkimchauco";
 
 void setup() {
   Serial.begin(115200);
   delay(1500);
   Serial.println("\n=== test_read_jkbms ===");
-
-  // WiFi
-  WiFi.mode(WIFI_STA);
-  WiFi.begin(ssid, pass);
-  Serial.print("Connecting WiFi");
-  for (int i = 0; i < 20; i++) {
-    delay(500);
-    Serial.print(".");
-    if (WiFi.status() == WL_CONNECTED) break;
-  }
-  Serial.printf("\nWiFi: %s\n", WiFi.status() == WL_CONNECTED ? "OK" : "FAIL");
 
   // JK BMS
   if (!jkBMS.begin(JK_MAC)) { Serial.println("JK BMS FAILED"); return; }
